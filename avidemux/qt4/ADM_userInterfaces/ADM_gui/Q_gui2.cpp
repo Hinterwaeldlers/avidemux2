@@ -12,6 +12,8 @@
  *                                                                         *
  ***************************************************************************/
 
+ #include <iostream>
+
 #include <QtCore/QFileInfo>
 #include <QtCore/QMimeData>
 #include <QtCore/QUrl>
@@ -2002,7 +2004,22 @@ admUITaskBarProgress *UI_getTaskBarProgress()
 */
 void UI_updateFrameCount(uint32_t curFrame)
 {
+    char text[80];
 
+    sprintf(text, "%d", curFrame);
+    WIDGET(currentFrame)->setText(text);
+
+	std::cerr
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< " cur frame = " << curFrame << "\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+	;
 }
 
 /**
@@ -2011,6 +2028,17 @@ void UI_updateFrameCount(uint32_t curFrame)
 */
 void UI_setFrameCount(uint32_t curFrame,uint32_t total)
 {
+	std::cerr
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< " set cur frame = " << curFrame << "\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+		<< "################\n"
+	;
 
 }
 
